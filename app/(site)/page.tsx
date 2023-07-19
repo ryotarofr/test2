@@ -1,6 +1,7 @@
 import getContents from '@/actions/getContents';
 import Header from '../../components/Header';
 import PageContent from './components/PageContent';
+import Test from '@/components/test';
 // import PostPreview from '@/components/PostPreview';
 // import getPostMetadata from '@/utils/getPostMetadata';
 
@@ -33,6 +34,9 @@ export default async function Home() {
             Newest Info
           </h1>
           {/* <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">{postPreviews}</div> */}
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
+            <Test />
+          </div>
         </div>
         <PageContent contents={contents} />
       </div>

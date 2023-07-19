@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link";
-// import { useRouter } from "next/navigation"
+import { useRouter } from "next/navigation"
 import { FaUnlockKeyhole } from "react-icons/fa6"
 
 
@@ -16,7 +16,7 @@ const PostPreview = (props: PostMetadata) => {
   const authModal = useAuthModal()
   const subscribeModal = useSubscribeModal();
   const { user, subscription } = useUser()
-  // const router = useRouter();
+  const router = useRouter();
 
 
   const onClick = () => {
@@ -28,9 +28,9 @@ const PostPreview = (props: PostMetadata) => {
       return subscribeModal.onOpen();
     }
 
-    // if (props.subrcrive && user && subscription) {
-    // router.push(`/posts/${props.slug}`)
-    // }
+    if (props.subrcrive && user && subscription) {
+      router.push(`/posts/${props.slug}`)
+    }
   }
 
   return (
