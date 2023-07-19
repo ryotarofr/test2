@@ -1,7 +1,7 @@
+import { PostMetadata } from "@/PostMetadata";
 import fs from "fs";
 import matter from "gray-matter";
 
-import { PostMetadata } from "@/types/PostMetadata";
 
 
 const getPostMetadata = (): PostMetadata[] => {
