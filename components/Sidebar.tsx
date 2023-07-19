@@ -71,9 +71,9 @@ const Sidebar: FC<SidebarProps> = ({ children, contents }) => {
           <Library contents={contents} />
         </Box>
       </div>
-      <main className="h-full flex-1 overflow-y-auto py-2">
+      <div className="h-full flex-1 overflow-y-auto py-2">
         {children}
-      </main>
+      </div>
     </div>
   )
 }
