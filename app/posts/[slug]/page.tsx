@@ -3,6 +3,7 @@ import Markdown from "markdown-to-jsx";
 import matter from "gray-matter";
 import PostContent from "../components/PostContent";
 
+export const revalidate = 0
 
 const getPostContent = (slug: string) => {
   const folder = "posts/";
