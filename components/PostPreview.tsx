@@ -1,6 +1,6 @@
 "use client"
 
-import Link from "next/link";
+// import Link from "next/link";
 import { useRouter } from "next/navigation"
 import { FaUnlockKeyhole } from "react-icons/fa6"
 
@@ -64,12 +64,12 @@ const PostPreview = (props: PostMetadata) => {
         <h2 className=" text-violet-600 hover:underline mb-4 px-4">{props.title}</h2>
       </div>
         :
-        <Link
-          href={`/posts/${props.slug}`}
+        <div
+          // href={`/posts/${props.slug}`}
           className="cursor-pointer"
         >
           <h2 className=" text-violet-600 hover:underline mb-4 px-4">{props.title}</h2>
-        </Link>
+        </div>
       }
       <p className="text-slate-700 px-4 pb-4">{props.subtitle}</p>
     </div>
