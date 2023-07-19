@@ -4,7 +4,6 @@ import matter from "gray-matter";
 import PostContent from "../components/PostContent";
 import getPostMetadata from "@/utils/getPostMetadata";
 
-export const revalidate = 0
 
 const getPostContent = (slug: string) => {
   const folder = "posts/";
@@ -15,12 +14,12 @@ const getPostContent = (slug: string) => {
 };
 
 // generateStaticParamsがあるとエラー出るからコメントアウトしてる
-export const generateStaticParams = async () => {
-  const posts = getPostMetadata();
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
-};
+// export const generateStaticParams = async () => {
+//   const posts = getPostMetadata();
+//   return posts.map((post) => ({
+//     slug: post.slug,
+//   }));
+// };
 
 const PostPage = (props: any) => {
   const slug = props.params.slug;
